@@ -2,6 +2,7 @@ from concurrent.futures import process
 import os 
 import telebot 
 import logging 
+from config import *
 from flask import Flask, request
 
 bot = telebot.Telebot (BOT_TOKEN)
