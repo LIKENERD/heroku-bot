@@ -1,6 +1,5 @@
-from concurrent.futures import process
 import os 
-import telebot 
+import telebot
 import logging 
 from config import *
 from flask import Flask, request
@@ -24,9 +23,7 @@ def redirect_message():
 
 
 
-
-
 if __name__ == '__name__':
     bot.remove_webhook()
     bot.set_webhook(url=APP_URL)
-    server.run(host='0.0.0.0', port=int(os.environ.get('POSRT', 5000)))
+    server.run(host='0.0.0.0', port=int(os.environ.get('POST', 5000)))
