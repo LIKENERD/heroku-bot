@@ -1,18 +1,18 @@
 import os 
 import telebot
-import logging 
+# import logging
 from config import *
 from flask import Flask, request
 
 bot = telebot.TeleBot(BOT_TOKEN)
 server = Flask(__name__)
-logger = telebot.logger
-logger.setLevel (logging.DEBUG)
+# logger = telebot.logger
+# logger.setLevel(logging.DEBUG)
 
 @bot.message_handler(commands=['start'])
-def start (message):
+def start(message):
     username = message.from_user.username
-    bot.reply_to(message, f'Hello, {username}!')
+    bot.reply_to(message, f"Hello, {username}!")
 
 @server.route(f'/{BOT_TOKEN}', methods = ['POST'])
 def redirect_message():
